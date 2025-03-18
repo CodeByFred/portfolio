@@ -6,17 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fred's Portfolio Page</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">Header</header>
+    <header class="header">
+        <nav class="nav">
+            <a href="#landing">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skills</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header__box">
+            <a href="https://www.linkedin.com/in/frederick-jack-599b3537/">
+                <img class="header__icons" src="./assets/icons/LinkedIn.svg" alt="linkedin"></a>
+            <a href="https://github.com/CodeByFred">
+                <img class="header__icons" src="./assets/icons/Github-Light.svg" alt="github">
+            </a>
+        </div>
+    </header>
     <main>
-        <section class="landing">Landing</section>
-        <section class="about">About</section>
-        <section class="skill">Skill</section>
-        <section class="project">Project</section>
+        <section id="landing">Landing</section>
+        <section id="about">About</section>
+        <section id="skill">Skill</section>
+        <section id="project">Project</section>
     </main>
-    <footer class="footer">Footer</footer>
+    <footer id="footer">Footer</footer>
 </body>
 
 </html>

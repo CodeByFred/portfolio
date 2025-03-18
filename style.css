@@ -184,6 +184,34 @@ body {
 
 .header {
   border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__box {
+  border: 1px solid green;
+}
+.header__icons {
+  margin: 0 10px;
+  height: 45px;
+  width: 45px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid red;
+}
+.nav a {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
