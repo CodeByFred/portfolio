@@ -11,11 +11,11 @@ body {
     "skill"
     "project"
     "contact"
-    "footer";
+    "foot";
 }
 
 .header {
-  grid-area: header;
+  grid-area: header; // is this a reserved word?? need to check
   border: 1px solid black;
   display: flex;
   flex-direction: row;
@@ -40,5 +40,15 @@ body {
   & a {
     @include mixins.font(600, 1rem);
     text-decoration: none;
+  }
+}
+
+.footer {
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+  & p {
+    @include mixins.font(400, 1rem);
   }
 }

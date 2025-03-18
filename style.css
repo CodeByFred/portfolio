@@ -179,7 +179,7 @@ summary {
 body {
   display: grid;
   grid-template-columns: minmax(540px, 1fr);
-  grid-template-areas: "header" "home" "about" "skill" "project" "contact" "footer";
+  grid-template-areas: "header" "home" "about" "skill" "project" "contact" "foot";
 }
 
 .header {
@@ -213,6 +213,20 @@ body {
   font-style: normal;
   font-size: 1rem;
   text-decoration: none;
+}
+
+.footer {
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+}
+.footer p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
