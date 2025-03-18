@@ -1,0 +1,17 @@
+@use "./partials/modern-normalize.css";
+
+body {
+  display: grid;
+  grid-template-columns: minmax(540px, 1fr);
+  grid-template-areas:
+    "header"
+    "landing"
+    "about"
+    "skill"
+    "project"
+    "footer";
+}
+
+.header {
+  border: 1px solid black;
+}
