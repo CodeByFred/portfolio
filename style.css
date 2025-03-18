@@ -179,10 +179,11 @@ summary {
 body {
   display: grid;
   grid-template-columns: minmax(540px, 1fr);
-  grid-template-areas: "header" "landing" "about" "skill" "project" "footer";
+  grid-template-areas: "header" "home" "about" "skill" "project" "contact" "footer";
 }
 
 .header {
+  grid-area: header;
   border: 1px solid black;
   display: flex;
   flex-direction: row;
