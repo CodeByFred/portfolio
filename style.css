@@ -215,6 +215,47 @@ body {
   text-decoration: none;
 }
 
+.home {
+  background-color: #dbe2ef;
+  grid-area: home;
+  height: 90vh;
+  display: flex;
+}
+.home__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+.home__image {
+  height: 100%;
+  width: 50%;
+}
+.home__heading {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  margin-left: 5%;
+}
+.home__heading span {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4rem;
+}
+.home__text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-left: 5%;
+}
+
 .footer {
   grid-area: foot;
   display: flex;

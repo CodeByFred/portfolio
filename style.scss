@@ -1,5 +1,6 @@
 @use "./partials/modern-normalize";
 @use "./partials/mixins";
+@use "./partials/colors";
 
 body {
   display: grid;
@@ -40,6 +41,40 @@ body {
   & a {
     @include mixins.font(600, 1rem);
     text-decoration: none;
+  }
+}
+
+.home {
+  background-color: colors.$blue-light;
+  grid-area: home;
+  height: 90vh;
+  display: flex;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+  }
+  &__image {
+    height: 100%;
+    width: 50%;
+  }
+  //   background-position-x: right;
+  //   background-position-y: top;
+  //   background-repeat: no-repeat;
+  //   background-size: auto;
+  //   background-image: url(./assets/images/camera_lense_0.jpeg);
+  &__heading {
+    @include mixins.font(700, 2rem);
+    margin-left: 5%;
+    & span {
+      @include mixins.font-caveat(700, 4rem);
+    }
+  }
+  &__text {
+    @include mixins.font(400, 1.5rem);
+    margin-left: 5%;
   }
 }
 

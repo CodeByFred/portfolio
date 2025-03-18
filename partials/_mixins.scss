@@ -5,3 +5,11 @@
   font-style: normal;
   font-size: $font-size;
 }
+
+@mixin font-caveat($font-weight, $font-size) {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+}
