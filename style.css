@@ -316,6 +316,36 @@ summary {
   font-size: 1rem;
 }
 
+.skills {
+  grid-area: skills;
+  background-color: #dbe2ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skills__heading {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+}
+.skills__heading-icons {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.25rem;
+}
+.skills__icon {
+  width: 55px;
+  height: 55px;
+}
+.skills__container-main {
+  margin-bottom: 5%;
+}
+
 body {
   display: grid;
   grid-template-columns: minmax(540px, 1fr);

@@ -1,3 +1,24 @@
+@use "../partials/colors";
+@use "../partials/mixins";
+
 .skills {
   grid-area: skills;
+  background-color: colors.$blue-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__heading {
+    @include mixins.font(700, 2rem);
+    &-icons {
+      @include mixins.font(600, 1.25rem);
+    }
+  }
+  &__icon {
+    width: 55px;
+    height: 55px;
+  }
+  &__container-main {
+    margin-bottom: 5%;
+  }
 }
