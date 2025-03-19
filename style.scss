@@ -1,22 +1,19 @@
 @use "./partials/modern-normalize";
 @use "./partials/mixins";
 @use "./partials/colors";
-@use "./sections/header";
+@use "./sections/sidenav";
 @use "./sections/home";
 @use "./sections/about";
-@use "./sections/footer";
 @use "./sections/skills";
 
 body {
   display: grid;
-  grid-template-columns: minmax(540px, 1fr);
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 300px calc(100% - 300px);
+  grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-    "head"
-    "home"
-    "about"
-    "skills"
-    "projects"
-    "contact"
-    "foot";
+    "sidenav home"
+    "sidenav about"
+    "sidenav skills"
+    "sidenav projects"
+    "sidenav contact";
 }

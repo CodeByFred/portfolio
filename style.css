@@ -176,17 +176,17 @@ summary {
   display: list-item;
 }
 
-.header {
-  grid-area: head;
+.sidenav {
+  grid-area: sidenav;
   border: 1px solid black;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
-.header__box {
+.sidenav__box {
   border: 1px solid green;
 }
-.header__icons {
+.sidenav__icons {
   margin: 0 10px;
   height: 45px;
   width: 45px;
@@ -194,7 +194,7 @@ summary {
 
 .nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -207,6 +207,20 @@ summary {
   font-style: normal;
   font-size: 1rem;
   text-decoration: none;
+}
+
+.footer {
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+}
+.footer p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 .home {
@@ -303,20 +317,6 @@ summary {
   color: #f9f7f7;
 }
 
-.footer {
-  grid-area: foot;
-  display: flex;
-  justify-content: center;
-  border: 1px solid blue;
-}
-.footer p {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-}
-
 .skills {
   grid-area: skills;
   background-color: #dbe2ef;
@@ -350,9 +350,9 @@ summary {
 
 body {
   display: grid;
-  grid-template-columns: minmax(540px, 1fr);
-  grid-template-rows: auto auto auto auto auto auto;
-  grid-template-areas: "head" "home" "about" "skills" "projects" "contact" "foot";
+  grid-template-columns: 300px calc(100% - 300px);
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: "sidenav home" "sidenav about" "sidenav skills" "sidenav projects" "sidenav contact";
 }
 
 /*# sourceMappingURL=style.css.map */
