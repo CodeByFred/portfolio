@@ -38,6 +38,7 @@
   &__heading {
     grid-area: heading;
     @include mixins.font(700, 2rem);
+    font-style: italic;
     color: colors.$white-ish;
     text-align: center;
   }
