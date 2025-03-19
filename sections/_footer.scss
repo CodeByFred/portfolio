@@ -1,0 +1,12 @@
+@use "../partials/mixins";
+@use "../partials/colors";
+
+.footer {
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+  & p {
+    @include mixins.font(400, 1rem);
+  }
+}

@@ -1,137 +1,21 @@
 @use "./partials/modern-normalize";
 @use "./partials/mixins";
 @use "./partials/colors";
+@use "./sections/header";
+@use "./sections/home";
+@use "./sections/about";
+@use "./sections/footer";
 
 body {
   display: grid;
   grid-template-columns: minmax(540px, 1fr);
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-areas:
-    "header"
+    "head"
     "home"
     "about"
-    "skill"
-    "project"
+    "skills"
+    "projects"
     "contact"
     "foot";
-}
-
-.header {
-  grid-area: header; // is this a reserved word?? need to check
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  &__box {
-    border: 1px solid green;
-  }
-  &__icons {
-    margin: 0 10px;
-    height: 45px;
-    width: 45px;
-  }
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  border: 1px solid red;
-  & a {
-    @include mixins.font(600, 1rem);
-    text-decoration: none;
-  }
-}
-
-.home {
-  background-color: colors.$blue-light;
-  grid-area: home;
-  height: 90vh;
-  display: flex;
-  &__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 50%;
-  }
-  &__image {
-    height: 100%;
-    width: 50%;
-  }
-  //   background-position-x: right;
-  //   background-position-y: top;
-  //   background-repeat: no-repeat;
-  //   background-size: auto;
-  //   background-image: url(./assets/images/camera_lense_0.jpeg);
-  &__heading {
-    @include mixins.font(700, 2rem);
-    margin-left: 5%;
-    & span {
-      @include mixins.font-caveat(700, 4rem);
-    }
-  }
-  &__text {
-    @include mixins.font(400, 1.5rem);
-    margin-left: 5%;
-  }
-}
-
-.about {
-  grid-area: about;
-  display: grid;
-  grid-template-areas:
-    "heading heading"
-    "picture info";
-  grid-template-columns: minmax(270px, 0.5fr) minmax(270px, 0.5fr);
-  grid-template-rows: auto auto;
-  justify-content: center;
-  align-items: center;
-  background-color: colors.$blue-navy;
-  &__container-image {
-    grid-area: picture;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  &__container-text {
-    grid-area: info;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  &__image {
-    height: 325px;
-    width: 250px;
-    border-radius: 5%;
-    box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-  }
-  &__heading {
-    grid-area: heading;
-    @include mixins.font(700, 2rem);
-    color: colors.$white-ish;
-    text-align: center;
-  }
-  &__text {
-    padding: 0 10%;
-    @include mixins.font(400, 1rem);
-    color: colors.$white-ish;
-  }
-}
-
-.footer {
-  grid-area: foot;
-  display: flex;
-  justify-content: center;
-  border: 1px solid blue;
-  & p {
-    @include mixins.font(400, 1rem);
-  }
 }

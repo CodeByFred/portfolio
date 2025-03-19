@@ -176,15 +176,8 @@ summary {
   display: list-item;
 }
 
-body {
-  display: grid;
-  grid-template-columns: minmax(540px, 1fr);
-  grid-template-rows: auto auto auto auto auto auto;
-  grid-template-areas: "header" "home" "about" "skill" "project" "contact" "foot";
-}
-
 .header {
-  grid-area: header;
+  grid-area: head;
   border: 1px solid black;
   display: flex;
   flex-direction: row;
@@ -321,6 +314,13 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(540px, 1fr);
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas: "head" "home" "about" "skills" "projects" "contact" "foot";
 }
 
 /*# sourceMappingURL=style.css.map */

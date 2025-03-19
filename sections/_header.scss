@@ -1,0 +1,30 @@
+@use "../partials/mixins";
+
+.header {
+  grid-area: head;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__box {
+    border: 1px solid green;
+  }
+  &__icons {
+    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid red;
+  & a {
+    @include mixins.font(600, 1rem);
+    text-decoration: none;
+  }
+}
