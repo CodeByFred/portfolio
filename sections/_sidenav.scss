@@ -2,39 +2,40 @@
 
 .sidenav {
   grid-area: sidenav;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav {
+  padding-top: 5%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  & a {
+    @include mixins.font(600, 1rem);
+    text-decoration: none;
+  }
+  &__footer {
+    @include mixins.font(400, 0.8em); // Need to fix container for rem sizing
+  }
   &__box {
-    border: 1px solid green;
   }
   &__icons {
     margin: 0 10px;
     height: 45px;
     width: 45px;
   }
-}
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  border: 1px solid red;
-  & a {
-    @include mixins.font(600, 1rem);
-    text-decoration: none;
-  }
-}
-
-.footer {
-  grid-area: foot;
-  display: flex;
-  justify-content: center;
-  border: 1px solid blue;
-  & p {
-    @include mixins.font(400, 1rem);
+  &__image {
+    height: 275px;
+    width: 225px;
+    border-radius: 5%;
+    // box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
+    // -webkit-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
+    // -moz-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
   }
 }

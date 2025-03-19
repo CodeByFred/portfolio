@@ -178,27 +178,20 @@ summary {
 
 .sidenav {
   grid-area: sidenav;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-.sidenav__box {
-  border: 1px solid green;
-}
-.sidenav__icons {
-  margin: 0 10px;
-  height: 45px;
-  width: 45px;
+  align-items: center;
+  height: 100%;
 }
 
 .nav {
+  padding-top: 5%;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  border: 1px solid red;
 }
 .nav a {
   font-family: "Montserrat", sans-serif;
@@ -208,19 +201,22 @@ summary {
   font-size: 1rem;
   text-decoration: none;
 }
-
-.footer {
-  grid-area: foot;
-  display: flex;
-  justify-content: center;
-  border: 1px solid blue;
-}
-.footer p {
+.nav__footer {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.8em;
+}
+.nav__icons {
+  margin: 0 10px;
+  height: 45px;
+  width: 45px;
+}
+.nav__image {
+  height: 275px;
+  width: 225px;
+  border-radius: 5%;
 }
 
 .home {
@@ -267,8 +263,8 @@ summary {
 .about {
   grid-area: about;
   display: grid;
-  grid-template-areas: "heading heading" "picture info";
-  grid-template-columns: minmax(270px, 0.5fr) minmax(270px, 0.5fr);
+  grid-template-areas: "heading" "info";
+  grid-template-columns: minmax(540px, 0.5fr);
   grid-template-rows: auto auto;
   justify-content: center;
   align-items: center;
@@ -287,14 +283,6 @@ summary {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.about__image {
-  height: 325px;
-  width: 250px;
-  border-radius: 5%;
-  box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
 }
 .about__heading {
   grid-area: heading;

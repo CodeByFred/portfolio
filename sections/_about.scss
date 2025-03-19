@@ -5,16 +5,15 @@
   grid-area: about;
   display: grid;
   grid-template-areas:
-    "heading heading"
-    "picture info";
-  grid-template-columns: minmax(270px, 0.5fr) minmax(270px, 0.5fr);
+    "heading"
+    "info";
+  grid-template-columns: minmax(540px, 0.5fr);
   grid-template-rows: auto auto;
   justify-content: center;
   align-items: center;
   background-color: colors.$blue-navy;
   &__container-image {
     grid-area: picture;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,14 +26,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  &__image {
-    height: 325px;
-    width: 250px;
-    border-radius: 5%;
-    box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-  }
+
   &__heading {
     grid-area: heading;
     @include mixins.font(700, 2rem);
