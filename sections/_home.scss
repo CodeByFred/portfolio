@@ -6,6 +6,7 @@
   grid-area: home;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   &__box {
     display: flex;
     flex-direction: column;
