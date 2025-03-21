@@ -417,7 +417,7 @@ summary {
 
 .projects {
   grid-area: projects;
-  height: 100vh;
+  height: 70vh;
   background-color: #dbe2ef;
   display: flex;
   flex-direction: column;
@@ -483,6 +483,11 @@ summary {
   flex-direction: row;
   justify-content: center;
   column-gap: 5px;
+}
+
+.contact {
+  grid-area: contact;
+  height: 30vh;
 }
 
 body {
