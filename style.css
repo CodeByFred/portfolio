@@ -340,13 +340,14 @@ summary {
 
 .about {
   grid-area: about;
-  height: 40vh;
+  min-height: 40vh;
+  max-height: fit-content;
   display: grid;
   grid-template-areas: "heading" "info";
   grid-template-rows: auto auto;
   justify-content: center;
   align-items: center;
-  background-color: #112d4e;
+  background-color: #dbe2ef;
 }
 .about__container-image {
   display: flex;
@@ -369,7 +370,7 @@ summary {
   font-style: normal;
   font-size: 2rem;
   font-style: italic;
-  color: #f9f7f7;
+  color: black;
   text-align: center;
 }
 .about__text {
@@ -379,7 +380,7 @@ summary {
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
-  color: #f9f7f7;
+  color: black;
 }
 
 .skills {
