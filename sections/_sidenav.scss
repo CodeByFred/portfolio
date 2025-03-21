@@ -1,41 +1,94 @@
 @use "../partials/mixins";
+@use "../partials/colors";
 
 .sidenav {
+  background-color: colors.$blue-navy;
   grid-area: sidenav;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  padding-top: 10%;
 }
-
 .nav {
-  padding-top: 5%;
+  height: auto;
+  width: 275px;
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
-  & a {
-    @include mixins.font(600, 1rem);
-    text-decoration: none;
-  }
-  &__footer {
-    @include mixins.font(400, 0.8em); // Need to fix container for rem sizing
-  }
-  &__box {
-  }
-  &__icons {
+  &__icon {
     margin: 0 10px;
     height: 45px;
     width: 45px;
   }
   &__image {
-    height: 275px;
-    width: 225px;
-    border-radius: 5%;
-    // box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-    // -webkit-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
-    // -moz-box-shadow: 10px 10px 5px 0px rgba(249, 247, 247, 0.5);
+    width: 60%;
+    border-radius: 10%;
+    margin: 10% 0;
+    box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+    -webkit-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+    -moz-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+  }
+  &__link-page {
+    margin: 2% 0;
+    width: 100%;
+    padding: 5% 0;
+    @include mixins.font(600, 1.1rem);
+    color: colors.$white-ish;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    &:hover {
+      background-color: colors.$blue;
+      text-shadow: none;
+    }
+  }
+  &__box {
+    width: 50%;
+    margin: 5% 0;
+    display: flex;
+    position: relative;
+  }
+  &__button {
+    margin: 5% 0;
+    background-color: colors.$blue;
+    color: colors.$white-ish;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50%;
+    @include mixins.font(500, 1rem);
+    &:hover {
+      background-color: colors.$blue-light;
+      color: colors.$blue-navy;
+      cursor: pointer;
+    }
+  }
+  &__footer {
+    @include mixins.font(400, 0.75rem);
+    color: colors.$white-ish;
+    position: fixed;
+    bottom: 0;
+  }
+}
+#linkedin--dark {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+#github {
+  position: absolute;
+  right: 0;
+}
+#github--dark {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
   }
 }

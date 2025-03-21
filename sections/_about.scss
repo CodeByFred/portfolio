@@ -7,13 +7,11 @@
   grid-template-areas:
     "heading"
     "info";
-  grid-template-columns: minmax(540px, 0.5fr);
   grid-template-rows: auto auto;
   justify-content: center;
   align-items: center;
   background-color: colors.$blue-navy;
   &__container-image {
-    grid-area: picture;
     display: flex;
     flex-direction: column;
     justify-content: center;

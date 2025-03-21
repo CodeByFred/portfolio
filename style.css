@@ -177,52 +177,117 @@ summary {
 }
 
 .sidenav {
+  background-color: #112d4e;
   grid-area: sidenav;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  padding-top: 10%;
 }
 
 .nav {
-  padding-top: 5%;
+  height: auto;
+  width: 275px;
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
 }
-.nav a {
+.nav__icon {
+  margin: 0 10px;
+  height: 45px;
+  width: 45px;
+}
+.nav__image {
+  width: 60%;
+  border-radius: 10%;
+  margin: 10% 0;
+  box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+  -webkit-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+  -moz-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+}
+.nav__link-page {
+  margin: 2% 0;
+  width: 100%;
+  padding: 5% 0;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #f9f7f7;
   text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+.nav__link-page:hover {
+  background-color: #3f72af;
+  text-shadow: none;
+}
+.nav__box {
+  width: 50%;
+  margin: 5% 0;
+  display: flex;
+  position: relative;
+}
+.nav__button {
+  margin: 5% 0;
+  background-color: #3f72af;
+  color: #f9f7f7;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50%;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+.nav__button:hover {
+  background-color: #dbe2ef;
+  color: #112d4e;
+  cursor: pointer;
 }
 .nav__footer {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.8em;
+  font-size: 0.75rem;
+  color: #f9f7f7;
+  position: fixed;
+  bottom: 0;
 }
-.nav__icons {
-  margin: 0 10px;
-  height: 45px;
-  width: 45px;
+
+#linkedin--dark {
+  position: absolute;
+  left: 0;
+  opacity: 0;
 }
-.nav__image {
-  height: 275px;
-  width: 225px;
-  border-radius: 5%;
+#linkedin--dark:hover {
+  opacity: 1;
+}
+
+#github {
+  position: absolute;
+  right: 0;
+}
+
+#github--dark {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+}
+#github--dark:hover {
+  opacity: 1;
 }
 
 .home {
   background-color: #dbe2ef;
   grid-area: home;
-  height: 90vh;
+  height: 100vh;
   display: flex;
 }
 .home__box {
@@ -264,14 +329,12 @@ summary {
   grid-area: about;
   display: grid;
   grid-template-areas: "heading" "info";
-  grid-template-columns: minmax(540px, 0.5fr);
   grid-template-rows: auto auto;
   justify-content: center;
   align-items: center;
   background-color: #112d4e;
 }
 .about__container-image {
-  grid-area: picture;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,9 +401,14 @@ summary {
 
 body {
   display: grid;
-  grid-template-columns: 300px calc(100% - 300px);
+  grid-template-columns: 300px auto;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: "sidenav home" "sidenav about" "sidenav skills" "sidenav projects" "sidenav contact";
+}
+
+#scroller {
+  overflow-y: scroll;
+  scrollbar-color: #112d4e #f9f7f7;
 }
 
 /*# sourceMappingURL=style.css.map */
