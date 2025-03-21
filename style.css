@@ -340,6 +340,7 @@ summary {
 
 .about {
   grid-area: about;
+  height: 40vh;
   display: grid;
   grid-template-areas: "heading" "info";
   grid-template-rows: auto auto;
@@ -383,6 +384,7 @@ summary {
 
 .skills {
   grid-area: skills;
+  height: 60vh;
   background-color: #dbe2ef;
   display: flex;
   flex-direction: column;
