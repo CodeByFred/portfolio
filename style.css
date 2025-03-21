@@ -488,6 +488,17 @@ summary {
 .contact {
   grid-area: contact;
   height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form {
+  width: 50%;
+  width: 500px;
+}
+.contact-form__box {
+  display: flex;
 }
 
 body {

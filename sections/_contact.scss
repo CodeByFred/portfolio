@@ -1,4 +1,15 @@
 .contact {
   grid-area: contact;
   height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &-form {
+    width: 50%;
+    width: 500px;
+  }
+  &-form__box {
+    display: flex;
+  }
 }
