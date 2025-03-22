@@ -1,15 +1,67 @@
+@use "../partials/mixins";
+@use "../partials/colors";
+
 .contact {
   grid-area: contact;
-  height: 30vh;
+  background-color: colors.$blue-light;
+  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  &-form {
-    width: 50%;
-    width: 500px;
+  &__heading {
+    @include mixins.font(700, 2rem);
+    font-style: italic;
+    margin-bottom: 5rem;
   }
-  &-form__box {
+  &-form {
+    width: 400px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$blue;
+    border-radius: 20px;
+    box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
+    -webkit-box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
+    -moz-box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
+
+    &__group {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 20px;
+      & label,
+      input,
+      textarea {
+        width: 100%;
+        padding: 7px 0;
+        resize: none;
+        @include mixins.font(500, 1rem);
+        color: colors.$white-ish;
+        border-radius: 5px;
+      }
+      & input,
+      textarea {
+        color: black !important;
+      }
+    }
+    &__button {
+      margin: 5% 0 2.5% 0;
+      background-color: colors.$blue-light;
+      color: colors.$blue-navy;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      width: 50%;
+      @include mixins.font(500, 1rem);
+      &:hover {
+        background-color: colors.$blue-navy;
+        color: colors.$white-ish;
+        cursor: pointer;
+      }
+    }
   }
 }

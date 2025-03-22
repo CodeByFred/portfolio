@@ -152,27 +152,16 @@
         <section class="contact" id="contact">
             <h2 class="contact__heading">Contact Me</h2>
             <form action="" class="contact-form">
-                <fieldset class="contact-form__border">
-                    <div class="contact-form__box">
-                        <div>
-                            <label for="name">Name</label>
-                            <br>
-                            <input type="text" id="name" name="name">
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <br>
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </div>
-                    <br>
+                <fieldset class="contact-form__group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
                     <label for="subject">Subject</label>
-                    <br>
-                    <input type="text" id="subject" name="subject">
-                    <br>
+                    <input type="text" id="subject" name="subject" required>
                     <label for="msg">Message</label>
-                    <br>
-                    <textarea id="msg" name="msg"></textarea>
+                    <textarea id="msg" name="msg" rows="8" required></textarea>
+                    <button class="contact-form__button">Send Message</button>
                 </fieldset>
             </form>
         </section>
