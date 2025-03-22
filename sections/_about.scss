@@ -6,11 +6,8 @@
   min-height: 100vh;
   max-height: fit-content;
   display: grid;
-  grid-template-areas:
-    "heading"
-    "info";
-  grid-template-rows: auto auto;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   // background-color: colors.$blue-light;
   &__container-image {
