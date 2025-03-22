@@ -414,7 +414,7 @@ summary {
 
 .projects {
   grid-area: projects;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #dbe2ef;
   display: flex;
   flex-direction: column;
@@ -426,29 +426,30 @@ summary {
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
+  color: #112d4e;
   font-style: italic;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 .projects__container {
-  border: 2px solid red;
-  height: 50%;
   width: 90%;
-  display: grid;
-  grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr) minmax(0px, 1fr);
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 .projects-card {
-  justify-self: center;
   margin: 0;
   background-color: #3f72af;
-  height: 300px;
-  width: 250px;
+  height: 365px;
+  width: 290px;
   border-radius: 15px;
+  box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
+  -webkit-box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
+  -moz-box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
 }
 .projects-card__image {
-  height: 50%;
+  height: 60%;
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -460,26 +461,39 @@ summary {
   font-style: normal;
   font-size: 1rem;
   color: #f9f7f7;
-  text-align: center;
-  padding-top: 10px;
 }
 .projects-card__text {
-  color: black;
-  padding: 0 5%;
-  border: solid 1px red;
-  margin: 5% 0;
+  color: #f9f7f7;
+  text-align: center;
+  margin: 5px 5px 0 5px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
 }
 .projects-card__text--tool {
-  background-color: #112d4e;
+  background-color: #dbe2ef;
+  color: #112d4e;
   padding: 5px;
-  margin: 0;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9rem;
 }
-.projects-card__container-bubble {
-  border: solid 1px green;
+.projects-card__container-tool {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  column-gap: 5px;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+.projects-card__container-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
