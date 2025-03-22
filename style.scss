@@ -9,8 +9,12 @@
 @use "./sections/contact";
 
 body {
+  background: #f9f7f7;
+  background: linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
+  background: -webkit-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
+  background: -moz-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
   display: grid;
-  grid-template-columns: 300px auto; //calc(100% - 300px)
+  grid-template-columns: 275px auto; //minmax(0, 300px) calc(100% - 300px)
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
     "sidenav home"

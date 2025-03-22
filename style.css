@@ -196,26 +196,27 @@ summary {
 }
 .nav__icon {
   margin: 0 10px;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
 }
 .nav__image {
-  width: 60%;
+  height: 150px;
+  width: 150px;
   border-radius: 10%;
   margin: 10% 0;
-  box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
-  -webkit-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
-  -moz-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+  box-shadow: 1px 1px 5px 1px rgba(249, 247, 247, 0.75);
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(249, 247, 247, 0.75);
+  -moz-box-shadow: 1px 1px 5px 1px rgba(249, 247, 247, 0.75);
 }
 .nav__link-page {
   margin: 2% 0;
   width: 100%;
-  padding: 5% 0;
+  padding: 3% 0;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #f9f7f7;
   text-decoration: none;
   text-align: center;
@@ -255,7 +256,7 @@ summary {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.75rem;
+  font-size: 0.77rem;
   color: #f9f7f7;
   position: fixed;
   bottom: 0;
@@ -285,7 +286,6 @@ summary {
 }
 
 .home {
-  background-color: #dbe2ef;
   grid-area: home;
   height: 100vh;
   display: flex;
@@ -340,14 +340,13 @@ summary {
 
 .about {
   grid-area: about;
-  min-height: 40vh;
+  min-height: 100vh;
   max-height: fit-content;
   display: grid;
   grid-template-areas: "heading" "info";
   grid-template-rows: auto auto;
   justify-content: center;
   align-items: center;
-  background-color: #dbe2ef;
 }
 .about__container-image {
   display: flex;
@@ -385,8 +384,7 @@ summary {
 
 .skills {
   grid-area: skills;
-  height: 60vh;
-  background-color: #dbe2ef;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -418,7 +416,6 @@ summary {
 .projects {
   grid-area: projects;
   min-height: 100vh;
-  background-color: #dbe2ef;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -501,8 +498,7 @@ summary {
 
 .contact {
   grid-area: contact;
-  background-color: #dbe2ef;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -576,8 +572,12 @@ summary {
 }
 
 body {
+  background: #f9f7f7;
+  background: linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
+  background: -webkit-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
+  background: -moz-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 275px auto;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: "sidenav home" "sidenav about" "sidenav skills" "sidenav projects" "sidenav contact";
 }

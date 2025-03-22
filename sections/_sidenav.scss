@@ -19,22 +19,23 @@
   align-items: center;
   &__icon {
     margin: 0 10px;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
   }
   &__image {
-    width: 60%;
+    height: 150px;
+    width: 150px;
     border-radius: 10%;
     margin: 10% 0;
-    box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
-    -webkit-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
-    -moz-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+    box-shadow: 1px 1px 5px 1px rgba(249, 247, 247, 0.75);
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(249, 247, 247, 0.75);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(249, 247, 247, 0.75);
   }
   &__link-page {
     margin: 2% 0;
     width: 100%;
-    padding: 5% 0;
-    @include mixins.font(600, 1.1rem);
+    padding: 3% 0;
+    @include mixins.font(600, 1rem);
     color: colors.$white-ish;
     text-decoration: none;
     text-align: center;
@@ -66,7 +67,7 @@
     }
   }
   &__footer {
-    @include mixins.font(400, 0.75rem);
+    @include mixins.font(400, 0.77rem);
     color: colors.$white-ish;
     position: fixed;
     bottom: 0;
