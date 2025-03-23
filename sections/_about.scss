@@ -3,37 +3,41 @@
 
 .about {
   grid-area: about;
-  min-height: 100vh;
-  max-height: fit-content;
-  display: grid;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: colors.$blue-light;
-  &__container-image {
+  &__container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 75%;
+    width: 75%;
+    flex-wrap: wrap;
   }
   &__container-text {
-    grid-area: info;
-    max-width: 100%;
+    width: 70%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
   &__heading {
-    grid-area: heading;
     @include mixins.font(700, 2rem);
     font-style: italic;
-    color: black;
-    text-align: center;
   }
   &__text {
-    padding: 0 10%;
-    @include mixins.font(400, 1rem);
-    color: black;
+    padding: 0 5%;
+    @include mixins.font(500, 1.1rem);
+    margin: 10px 0;
+    text-indent: 25px;
+  }
+  &__image {
+    height: 240px;
+    width: 180px;
+    border-radius: 10%;
+    box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
+    -moz-box-shadow: 1px 1px 5px 1px #dbe2efbf;
   }
 }
