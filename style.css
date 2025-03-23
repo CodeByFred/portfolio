@@ -181,15 +181,31 @@ summary {
   grid-area: sidenav;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding-top: 10%;
 }
 
 .nav {
-  height: auto;
+  align-self: center;
+  height: 100%;
   width: 275px;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__button--close {
+  align-self: flex-end;
+  color: #f9f7f7;
+  font-size: 45px;
+  text-decoration: none;
+}
+.nav__container {
+  margin-top: -20%;
+  height: fit-content;
+  justify-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,7 +218,7 @@ summary {
 .nav__image {
   width: 60%;
   border-radius: 10%;
-  margin: 10% 0;
+  margin-bottom: 10%;
   box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
   -webkit-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
   -moz-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
@@ -231,7 +247,7 @@ summary {
   display: flex;
   position: relative;
 }
-.nav__button {
+.nav__button--cv {
   margin: 5% 0;
   background-color: #3f72af;
   color: #f9f7f7;
@@ -245,7 +261,7 @@ summary {
   font-style: normal;
   font-size: 1rem;
 }
-.nav__button:hover {
+.nav__button--cv:hover {
   background-color: #dbe2ef;
   color: #112d4e;
   cursor: pointer;
@@ -257,8 +273,6 @@ summary {
   font-style: normal;
   font-size: 0.75rem;
   color: #f9f7f7;
-  position: fixed;
-  bottom: 0;
 }
 
 #linkedin--dark {
