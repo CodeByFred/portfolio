@@ -21,11 +21,13 @@
   align-items: center;
   &__button--close {
     align-self: flex-end;
+    margin-right: 10px;
     color: colors.$white-ish;
     font-size: 45px;
     text-decoration: none;
   }
   &__container {
+    width: 95%;
     margin-top: -20%;
     height: fit-content;
     justify-self: center;
@@ -43,9 +45,9 @@
     width: 150px;
     border-radius: 10%;
     margin-bottom: 10%;
-    box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
-    -webkit-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
-    -moz-box-shadow: 1px 1px 25px 1px rgba(249, 247, 247, 0.75);
+    box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
+    -moz-box-shadow: 1px 1px 5px 1px #dbe2efbf;
   }
   &__link-page {
     margin: 2% 0;
