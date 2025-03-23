@@ -15,28 +15,31 @@
 </head>
 
 <body>
-    <aside class="sidenav">
+    <aside class="sidenav" id="sidenav">
         <nav class="nav">
-            <img class="nav__image" src="./assets/images/me.jpeg" alt="me">
-            <a class="nav__link-page" href="#home">Home</a>
-            <a class="nav__link-page" href="#about">About Me</a>
-            <a class="nav__link-page" href="#skills">Education & Skills</a>
-            <a class="nav__link-page" href="#project">Projects</a>
-            <a class="nav__link-page" href="#contact">Contact Me</a>
-            <div class="nav__box">
-                <a href="https://www.linkedin.com/in/frederick-jack-599b3537/">
-                    <img class="nav__icon" id="linkedin" src="./assets/icons/LinkedIn.svg" alt="linkedin">
-                    <img class="nav__icon" id="linkedin--dark" src="./assets/icons/LinkedIn-Dark.svg"
-                        alt="linkedin-light">
-                </a>
-                <a href="https://github.com/CodeByFred">
-                    <img class="nav__icon" id="github" src="./assets/icons/Github-Light.svg" alt="github">
-                    <img class="nav__icon" id="github--dark" src="./assets/icons/Github-Dark.svg" alt="github-dark">
-                </a>
+            <a class="nav__button--close">&times;</a>
+            <div class="nav__container">
+                <img class="nav__image" src="./assets/images/me.jpeg" alt="me">
+                <a class="nav__link-page" href="#home">Home</a>
+                <a class="nav__link-page" href="#about">About Me</a>
+                <a class="nav__link-page" href="#skills">Education & Skills</a>
+                <a class="nav__link-page" href="#project">Projects</a>
+                <a class="nav__link-page" href="#contact">Contact Me</a>
+                <div class="nav__box">
+                    <a class="nav__link-external" href="https://www.linkedin.com/in/frederick-jack-599b3537/">
+                        <img class="nav__icon" id="linkedin" src="./assets/icons/LinkedIn.svg" alt="linkedin">
+                        <img class="nav__icon" id="linkedin--dark" src="./assets/icons/LinkedIn-Dark.svg"
+                            alt="linkedin-light">
+                    </a>
+                    <a class="nav__link-external" href="https://github.com/CodeByFred">
+                        <img class="nav__icon" id="github" src="./assets/icons/Github-Light.svg" alt="github">
+                        <img class="nav__icon" id="github--dark" src="./assets/icons/Github-Dark.svg" alt="github-dark">
+                    </a>
+                </div>
+                <button class="nav__button--cv">View My CV</button>
             </div>
-            <button class="nav__button">View My CV</button>
+            <p class="nav__footer">© 2025 | CodeByFred | All rights reserved</p>
         </nav>
-        <p class="nav__footer">© 2025 | CodeByFred | All rights reserved</p>
     </aside>
     <main>
         <section class="home" id="home">
