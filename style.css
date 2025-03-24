@@ -303,7 +303,7 @@ summary {
 
 .home {
   grid-area: home;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -315,7 +315,7 @@ summary {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 90%;
   width: 50%;
 }
