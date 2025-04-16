@@ -1,0 +1,87 @@
+@use "../partials/mixins";
+@use "../partials/colors";
+
+.collapsed {
+  .nav {
+    width: 60px;
+    justify-content: center;
+    &__button--close {
+      display: none;
+    }
+    &__info {
+      display: none;
+    }
+    &__footer {
+      color: transparent;
+      margin: 0;
+      font-size: 10px;
+    }
+    &__button--open {
+      align-self: center;
+      color: colors.$white-ish;
+      font-size: 30px;
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__icon {
+      margin: 0 10px;
+      height: 30px;
+      width: 30px;
+    }
+    &__button--cv {
+      margin: 15px 0;
+      background-color: colors.$blue;
+      color: colors.$white-ish;
+      border: none;
+      border-radius: 5px;
+      //   padding: 5px;
+      height: 30px;
+      width: 40px;
+      @include mixins.font(500, 0.5rem);
+      &:hover {
+        background-color: colors.$blue-light;
+        color: colors.$blue-navy;
+        cursor: pointer;
+      }
+    }
+    &__box {
+      height: 80px;
+      width: fit-content;
+      margin: 5% 0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    &__link-page {
+      text-align: center;
+      margin: 2px 0;
+      padding: 10px 0;
+    }
+  }
+
+  #linkedin--dark {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  #github {
+    position: absolute;
+    bottom: 0;
+  }
+
+  #github--dark {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

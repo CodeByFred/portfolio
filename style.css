@@ -189,22 +189,14 @@ summary {
 .nav {
   align-self: center;
   height: 100%;
-  width: 275px;
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.nav__button--close {
-  align-self: flex-end;
-  margin-right: 10px;
-  color: #f9f7f7;
-  font-size: 45px;
-  text-decoration: none;
-}
 .nav__container {
-  width: 95%;
+  width: 100%;
   margin-top: -20%;
   height: fit-content;
   justify-self: center;
@@ -212,24 +204,18 @@ summary {
   flex-direction: column;
   align-items: center;
 }
-.nav__icon {
-  margin: 0 10px;
-  height: 40px;
-  width: 40px;
-}
-.nav__image {
-  height: 150px;
-  width: 150px;
-  border-radius: 10%;
-  margin-bottom: 10%;
-  box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
-  -webkit-box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
-  -moz-box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.7490196078);
+.nav__container--page-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1%;
 }
 .nav__link-page {
   margin: 2% 0;
   width: 95%;
-  padding: 3% 0;
+  padding: 5% 10%;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -237,67 +223,174 @@ summary {
   font-size: 1rem;
   color: #f9f7f7;
   text-decoration: none;
-  text-align: center;
+  text-wrap: nowrap;
   border-radius: 5px;
 }
 .nav__link-page:hover {
   background-color: #3f72af;
   text-shadow: none;
 }
-.nav__box {
-  width: 50%;
+.nav__link-page.active {
+  background-color: #3f72af;
+  text-shadow: none;
+}
+
+.expanded i {
+  margin-left: 15px;
+}
+.expanded .nav__button--open {
+  display: none;
+}
+.expanded .nav__button--close {
+  align-self: flex-end;
+  margin-right: 10px;
+  color: #f9f7f7;
+  font-size: 30px;
+}
+.expanded .nav__button--close:hover {
+  cursor: pointer;
+}
+.expanded .nav__info {
+  margin-left: 15px;
+}
+.expanded .nav__icon {
+  margin: 0 10px;
+  height: 35px;
+  width: 35px;
+}
+.expanded .nav__footer {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.65rem;
+  color: #f9f7f7;
+}
+.expanded .nav__box {
+  width: 60%;
   margin: 5% 0;
   display: flex;
   position: relative;
 }
-.nav__button--cv {
+.expanded .nav__button--cv {
   margin: 5% 0;
   background-color: #3f72af;
   color: #f9f7f7;
   border: none;
   border-radius: 5px;
   padding: 5px;
-  width: 50%;
+  width: 65%;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 1rem;
 }
-.nav__button--cv:hover {
+.expanded .nav__button--cv:hover {
   background-color: #dbe2ef;
   color: #112d4e;
   cursor: pointer;
 }
-.nav__footer {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.77rem;
-  color: #f9f7f7;
-}
-
-#linkedin--dark {
+.expanded #linkedin--dark {
   position: absolute;
   left: 0;
   opacity: 0;
 }
-#linkedin--dark:hover {
+.expanded #linkedin--dark:hover {
   opacity: 1;
 }
-
-#github {
+.expanded #github {
   position: absolute;
   right: 0;
 }
-
-#github--dark {
+.expanded #github--dark {
   position: absolute;
   right: 0;
   opacity: 0;
 }
-#github--dark:hover {
+.expanded #github--dark:hover {
+  opacity: 1;
+}
+
+.collapsed .nav {
+  width: 60px;
+  justify-content: center;
+}
+.collapsed .nav__button--close {
+  display: none;
+}
+.collapsed .nav__info {
+  display: none;
+}
+.collapsed .nav__footer {
+  color: transparent;
+  margin: 0;
+  font-size: 10px;
+}
+.collapsed .nav__button--open {
+  align-self: center;
+  color: #f9f7f7;
+  font-size: 30px;
+  text-decoration: none;
+}
+.collapsed .nav__button--open:hover {
+  cursor: pointer;
+}
+.collapsed .nav__icon {
+  margin: 0 10px;
+  height: 30px;
+  width: 30px;
+}
+.collapsed .nav__button--cv {
+  margin: 15px 0;
+  background-color: #3f72af;
+  color: #f9f7f7;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.5rem;
+}
+.collapsed .nav__button--cv:hover {
+  background-color: #dbe2ef;
+  color: #112d4e;
+  cursor: pointer;
+}
+.collapsed .nav__box {
+  height: 80px;
+  width: fit-content;
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.collapsed .nav__link-page {
+  text-align: center;
+  margin: 2px 0;
+  padding: 10px 0;
+}
+.collapsed #linkedin--dark {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+.collapsed #linkedin--dark:hover {
+  opacity: 1;
+}
+.collapsed #github {
+  position: absolute;
+  bottom: 0;
+}
+.collapsed #github--dark {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+}
+.collapsed #github--dark:hover {
   opacity: 1;
 }
 
@@ -435,7 +528,7 @@ summary {
 
 .projects {
   grid-area: projects;
-  min-height: 100vh;
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -571,6 +664,15 @@ summary {
 .contact-form__group textarea {
   color: black !important;
 }
+.contact-form__group input:focus,
+.contact-form__group textarea:focus {
+  outline: none;
+  border: 3px solid;
+  border-color: #112d4e;
+  box-shadow: 1px 1px 1px 0px rgba(17, 45, 78, 0.75);
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(17, 45, 78, 0.75);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(17, 45, 78, 0.75);
+}
 .contact-form__button {
   margin: 5% 0 2.5% 0;
   background-color: #dbe2ef;
@@ -597,7 +699,8 @@ body {
   background: -webkit-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
   background: -moz-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
   display: grid;
-  grid-template-columns: 275px auto;
+  grid-template-columns: 225px auto;
+  transition: grid-template-columns 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: "sidenav home" "sidenav about" "sidenav skills" "sidenav projects" "sidenav contact";
 }
@@ -609,6 +712,7 @@ hr {
 }
 
 #scroller {
+  scroll-behavior: smooth;
   overflow-y: scroll;
   scrollbar-color: #112d4e #f9f7f7;
 }

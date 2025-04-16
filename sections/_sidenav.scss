@@ -13,99 +13,46 @@
 .nav {
   align-self: center;
   height: 100%;
-  width: 275px;
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  &__button--close {
-    align-self: flex-end;
-    margin-right: 10px;
-    color: colors.$white-ish;
-    font-size: 45px;
-    text-decoration: none;
-  }
+
   &__container {
-    width: 95%;
+    width: 100%;
     margin-top: -20%;
     height: fit-content;
     justify-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    &--page-links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1%;
+    }
   }
-  &__icon {
-    margin: 0 10px;
-    height: 40px;
-    width: 40px;
-  }
-  &__image {
-    height: 150px;
-    width: 150px;
-    border-radius: 10%;
-    margin-bottom: 10%;
-    box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
-    -webkit-box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
-    -moz-box-shadow: 1px 1px 5px 1px #dbe2efbf;
-  }
+
   &__link-page {
     margin: 2% 0;
     width: 95%;
-    padding: 3% 0;
+    padding: 5% 10%;
     @include mixins.font(600, 1rem);
     color: colors.$white-ish;
     text-decoration: none;
-    text-align: center;
+    text-wrap: nowrap;
     border-radius: 5px;
     &:hover {
       background-color: colors.$blue;
       text-shadow: none;
     }
-  }
-  &__box {
-    width: 50%;
-    margin: 5% 0;
-    display: flex;
-    position: relative;
-  }
-  &__button--cv {
-    margin: 5% 0;
-    background-color: colors.$blue;
-    color: colors.$white-ish;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    width: 50%;
-    @include mixins.font(500, 1rem);
-    &:hover {
-      background-color: colors.$blue-light;
-      color: colors.$blue-navy;
-      cursor: pointer;
+    &.active {
+      background-color: colors.$blue;
+      text-shadow: none;
     }
-  }
-  &__footer {
-    @include mixins.font(400, 0.77rem);
-    color: colors.$white-ish;
-  }
-}
-#linkedin--dark {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  &:hover {
-    opacity: 1;
-  }
-}
-#github {
-  position: absolute;
-  right: 0;
-}
-#github--dark {
-  position: absolute;
-  right: 0;
-  opacity: 0;
-  &:hover {
-    opacity: 1;
   }
 }

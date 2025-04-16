@@ -3,7 +3,7 @@
 
 .projects {
   grid-area: projects;
-  min-height: 100vh;
+  min-height: fit-content;
   // background-color: colors.$blue-light;
   display: flex;
   flex-direction: column;

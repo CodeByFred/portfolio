@@ -12,19 +12,32 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="./main.js" defer></script>
+    <script src="https://kit.fontawesome.com/1834b30425.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <aside class="sidenav" id="sidenav">
-        <nav class="nav">
-            <a class="nav__button--close">&times;</a>
+        <nav class="nav expanded">
+            <a class="nav__button--close" onclick="closeNav()"><i class="fa-solid fa-chevron-left"
+                    style="color: #ffffff;"></i></a>
+            <a class="nav__button--open" onclick="openNav()"><i class="fa-solid fa-chevron-right"
+                    style="color: #ffffff;"></i></a>
             <div class="nav__container">
-                <!-- <img class="nav__image" src="./assets/images/me.jpeg" alt="me"> -->
-                <a class="nav__link-page" href="#home">Home</a>
-                <a class="nav__link-page" href="#about">About Me</a>
-                <a class="nav__link-page" href="#skills">Education & Skills</a>
-                <a class="nav__link-page" href="#project">Projects</a>
-                <a class="nav__link-page" href="#contact">Contact Me</a>
+                <div class="nav__container--page-links">
+                    <a class="nav__link-page" href="#home"><i class="fa-solid fa-house fa-lg"
+                            style="color: #ffffff;"></i>
+                        <span class="nav__info">Home</span></a>
+                    <a class="nav__link-page" href="#about"><i class="fa-solid fa-user fa-lg"
+                            style="color: #ffffff;"></i>
+                        <span class="nav__info">About Me</span></a>
+                    <a class="nav__link-page" href="#skills"><i class="fa-solid fa-user-graduate fa-lg"
+                            style="color: #ffffff;"></i> <span class="nav__info">Skillset</span></a>
+                    <a class="nav__link-page" href="#project"><i class="fa-solid fa-briefcase fa-lg"
+                            style="color: #ffffff;"></i> <span class="nav__info">Projects</span></a>
+                    <a class="nav__link-page" href="#contact"><i class="fa-solid fa-envelope fa-lg"
+                            style="color: #ffffff;"></i> <span class="nav__info">Contact Me</span></a>
+                </div>
                 <div class="nav__box">
                     <a class="nav__link-external" href="https://www.linkedin.com/in/frederick-jack-599b3537/">
                         <img class="nav__icon" id="linkedin" src="./assets/icons/LinkedIn.svg" alt="linkedin">
@@ -199,13 +212,13 @@
             <form action="" class="contact-form">
                 <fieldset class="contact-form__group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="off" required>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="off" required>
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <input type="text" id="subject" name="subject" autocomplete="off" required>
                     <label for="msg">Message</label>
-                    <textarea id="msg" name="msg" rows="8" required></textarea>
+                    <textarea id="msg" name="msg" rows="8" autocomplete="off" required></textarea>
                     <button class="contact-form__button">Send Message</button>
                 </fieldset>
             </form>
