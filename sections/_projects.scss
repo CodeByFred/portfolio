@@ -4,13 +4,12 @@
 .projects {
   grid-area: projects;
   min-height: fit-content;
-  // background-color: colors.$blue-light;
   display: flex;
   flex-direction: column;
   align-items: center;
   &__heading {
     @include mixins.font(700, 2rem);
-    color: colors.$blue-navy;
+    color: colors.$text-main;
     font-style: italic;
     margin-bottom: 2.5rem;
   }
@@ -21,6 +20,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 3rem;
   }
   &-card {
     margin: 0;
@@ -28,9 +28,8 @@
     height: 365px;
     width: 290px;
     border-radius: 15px;
-    box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
-    -webkit-box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
-    -moz-box-shadow: 1px 5px 5px 0px rgba(17, 45, 78, 0.75);
+    box-shadow: 0 10px 30px colors.$shadow-dark;
+
     &__image {
       height: 60%;
       width: 100%;
@@ -48,7 +47,7 @@
       @include mixins.font(400, 0.8rem);
       &--tool {
         background-color: colors.$blue-light;
-        color: colors.$blue-navy;
+        color: colors.$text-main;
         padding: 5px;
         border-radius: 10px;
         @include mixins.font(500, 0.9rem);

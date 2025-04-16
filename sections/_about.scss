@@ -24,11 +24,15 @@
   }
   &__heading {
     @include mixins.font(700, 2rem);
+    color: colors.$text-main;
+
     font-style: italic;
   }
   &__text {
     padding: 0 5%;
     @include mixins.font(500, 1.1rem);
+    color: colors.$text-main;
+
     margin: 10px 0;
     text-indent: 25px;
   }
@@ -36,8 +40,6 @@
     height: 240px;
     width: 180px;
     border-radius: 10%;
-    box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
-    -webkit-box-shadow: 1px 1px 5px 1px rgba(219, 226, 239, 0.75);
-    -moz-box-shadow: 1px 1px 5px 1px #dbe2efbf;
+    box-shadow: 0 10px 30px colors.$shadow-dark;
   }
 }

@@ -50,6 +50,7 @@
       background-color: colors.$blue;
       text-shadow: none;
     }
+    // not a pseduo-class!
     &.active {
       background-color: colors.$blue;
       text-shadow: none;

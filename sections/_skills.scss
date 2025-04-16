@@ -1,25 +1,87 @@
 @use "../partials/colors";
 @use "../partials/mixins";
 
+.vl {
+  border: 0;
+  width: 1px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
 .skills {
   grid-area: skills;
   height: 100vh;
-  // background-color: colors.$blue-light;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  &__container {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12%;
+  }
+
   &__heading {
     @include mixins.font(700, 2rem);
+    color: colors.$text-main;
+
     font-style: italic;
+    margin-bottom: 2rem;
+    text-align: center;
+
     &-icons {
       @include mixins.font(600, 1.25rem);
     }
   }
-  &__icon {
-    width: 55px;
-    height: 55px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
   }
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   &__container-main {
-    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    @include mixins.font(600, 1.25rem);
+    color: colors.$text-main;
+  }
+
+  p {
+    margin: 0;
+    @include mixins.font(400, 1rem);
+    color: colors.$text-main;
   }
 }

@@ -2,7 +2,13 @@
 @use "../partials/colors";
 
 .home {
-  // background-color: colors.$blue-light;
+  h2,
+  h3,
+  p {
+    color: colors.$text-main;
+    margin: 2% 0;
+  }
+
   grid-area: home;
   min-height: 100vh;
   display: flex;
@@ -10,18 +16,18 @@
   justify-content: center;
   align-items: center;
   &__box {
-    right: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     height: 90%;
     width: 50%;
+    margin-left: 8%;
   }
   &__image {
     height: 55%;
-    width: 85%;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   }
 
   &__heading {
@@ -31,11 +37,10 @@
     }
   }
   &__subheading {
-    @include mixins.font(500, 1.75rem);
+    @include mixins.font(400, 1.75rem);
     font-style: italic;
   }
   &__text {
-    @include mixins.font(400, 1.5rem);
-    margin-bottom: 5%;
+    @include mixins.font(400, 1.1rem);
   }
 }

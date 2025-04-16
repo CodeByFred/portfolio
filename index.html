@@ -59,7 +59,7 @@
             <div class="home__box">
                 <h2 class="home__heading">Hi, I'm <span>Fred</span>.</h2>
                 <h3 class="home__subheading">/* Full Stack Software Engineer */</h3>
-                <p class="home__text">I design and develop software that makes things work better.</p>
+                <p class="home__text">{I design and develop software that makes things work better.}</p>
                 <img class="home__image" src="./assets/images/unsplash.jpg" alt="lens">
             </div>
         </section>
@@ -95,34 +95,65 @@
         </section>
         <hr>
         <section class="skills" id="skills">
-            <h2 class="skills__heading">Tech Skills</h2>
-            <div class="skills__container-main">
-                <div>
-                    <h3 class="skills__heading-icons">Proficient</h3>
-                    <img class="skills__icon" src="./assets/icons/HTML.svg" alt="HTML" title="HTML">
-                    <img class="skills__icon" src="./assets/icons/CSS.svg" alt="CSS" title="CSS">
-                    <img class="skills__icon" src="./assets/icons/Sass.svg" alt="Sass" title="Sass">
-                    <img class="skills__icon" src="./assets/icons/JavaScript.svg" alt="JavaScript" title="JavaScript">
-                    <img class="skills__icon" src="./assets/icons/Java-Light.svg" alt="Java" title="Java">
+            <div class="skills__container">
+                <div class="education">
+                    <h2 class="skills__heading">Education</h2>
+
+                    <h3>Macquarie University</h3>
+                    <p>Bachelor of Engineering (Honours)</p>
+                    <p>Software Engineering</p>
+
+                    <h3>University of Texas at Arlington</h3>
+                    <p>Bachelor of Arts (B.A)</p>
+                    <p>Psychology</p>
                 </div>
-                <div>
-                    <h3 class="skills__heading-icons">Intermediate</h3>
-                    <img class="skills__icon" src="./assets/icons/Figma-Light.svg" alt="Figma" title="Figma">
-                    <img class="skills__icon" src="./assets/icons/Firebase-Light.svg" alt="Firebase" title="Firebase">
-                    <img class="skills__icon" src="./assets/icons/Flutter-Light.svg" alt="Flutter" title="Flutter">
-                    <img class="skills__icon" src="./assets/icons/Github-Light.svg" alt="GitHub" title="GitHub">
-                    <img class="skills__icon" src="./assets/icons/Jira-Light.svg" alt="JIRA" title="JIRA">
-                    <img class="skills__icon" src="./assets/icons/MySQL-Light.svg" alt="MySQL" title="MySQL">
-                    <img class="skills__icon" src="./assets/icons/React-Light.svg" alt="React"
-                        title="React/React Native">
+                <div class="vl"></div>
+                <div class="skills__container-main">
+                    <h2 class="skills__heading">Tech Skills</h2>
+
+                    <div class="skills__group">
+                        <h3 class="skills__heading-icons">Proficient</h3>
+                        <div class="skills__icons">
+                            <img class="skills__icon" src="./assets/icons/HTML.svg" alt="HTML" title="HTML" />
+                            <img class="skills__icon" src="./assets/icons/CSS.svg" alt="CSS" title="CSS" />
+                            <img class="skills__icon" src="./assets/icons/Sass.svg" alt="Sass" title="Sass" />
+                            <img class="skills__icon" src="./assets/icons/JavaScript.svg" alt="JavaScript"
+                                title="JavaScript" />
+                            <img class="skills__icon" src="./assets/icons/Java-Light.svg" alt="Java" title="Java" />
+                        </div>
+                    </div>
+
+                    <div class="skills__group">
+                        <h3 class="skills__heading-icons">Intermediate</h3>
+                        <div class="skills__icons">
+                            <img class="skills__icon" src="./assets/icons/Figma-Light.svg" alt="Figma" title="Figma" />
+                            <img class="skills__icon" src="./assets/icons/Firebase-Light.svg" alt="Firebase"
+                                title="Firebase" />
+                            <img class="skills__icon" src="./assets/icons/Flutter-Light.svg" alt="Flutter"
+                                title="Flutter" />
+                            <img class="skills__icon" src="./assets/icons/Github-Light.svg" alt="GitHub"
+                                title="GitHub" />
+                            <img class="skills__icon" src="./assets/icons/Jira-Light.svg" alt="JIRA" title="JIRA" />
+                            <img class="skills__icon" src="./assets/icons/MySQL-Light.svg" alt="MySQL" title="MySQL" />
+                            <img class="skills__icon" src="./assets/icons/React-Light.svg" alt="React"
+                                title="React/React Native" />
+                        </div>
+                    </div>
+
+                    <div class="skills__group">
+                        <h3 class="skills__heading-icons">Beginner</h3>
+                        <div class="skills__icons">
+                            <img class="skills__icon" src="./assets/icons/AWS-Light.svg" alt="AWS" title="AWS" />
+                            <img class="skills__icon" src="./assets/icons/Spring-Light.svg" alt="Spring"
+                                title="Spring" />
+                            <img class="skills__icon" src="./assets/icons/TypeScript.svg" alt="TypeScript"
+                                title="TypeScript" />
+                            <img class="skills__icon" src="./assets/icons/Ubuntu-Light.svg" alt="Ubuntu"
+                                title="Ubuntu" />
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="skills__heading-icons">Beginner</h3>
-                    <img class="skills__icon" src="./assets/icons/AWS-Light.svg" alt="AWS" title="AWS">
-                    <img class="skills__icon" src="./assets/icons/Spring-Light.svg" alt="Spring" title="Spring">
-                    <img class="skills__icon" src="./assets/icons/TypeScript.svg" alt="TypeScript" title="TypeScript">
-                    <img class="skills__icon" src="./assets/icons/Ubuntu-Light.svg" alt="Ubuntu" title="Ubuntu">
-                </div>
+
             </div>
         </section>
         <hr>
@@ -209,20 +240,27 @@
         <hr>
         <section class="contact" id="contact">
             <h2 class="contact__heading">Contact Me</h2>
+            <p class="contact__subtext">I'd love to hear from you. Fill out the form and I'll reply soon!</p>
+
             <form action="" class="contact-form">
                 <fieldset class="contact-form__group">
-                    <label for="name">Name</label>
+                    <label for="name"><i class="fa-solid fa-user"></i> Name</label>
                     <input type="text" id="name" name="name" autocomplete="off" required>
-                    <label for="email">Email</label>
+
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
                     <input type="email" id="email" name="email" autocomplete="off" required>
-                    <label for="subject">Subject</label>
+
+                    <label for="subject"><i class="fa-solid fa-pen-to-square"></i> Subject</label>
                     <input type="text" id="subject" name="subject" autocomplete="off" required>
-                    <label for="msg">Message</label>
+
+                    <label for="msg"><i class="fa-solid fa-comment-dots"></i> Message</label>
                     <textarea id="msg" name="msg" rows="8" autocomplete="off" required></textarea>
-                    <button class="contact-form__button">Send Message</button>
+
+                    <button class="contact-form__button"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
                 </fieldset>
             </form>
         </section>
+
     </main>
 </body>
 

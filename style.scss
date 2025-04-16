@@ -11,10 +11,7 @@
 @use "./sections/contact";
 
 body {
-  background: #f9f7f7;
-  background: linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
-  background: -webkit-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
-  background: -moz-linear-gradient(180deg, #f9f7f7 0%, #3f72af 100%);
+  background: linear-gradient(to right, colors.$blue, colors.$blue-light);
   display: grid;
   grid-template-columns: 225px auto;
   transition: grid-template-columns 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);

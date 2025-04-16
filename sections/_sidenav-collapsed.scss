@@ -17,6 +17,7 @@
       font-size: 10px;
     }
     &__button--open {
+      margin-top: 10px;
       align-self: center;
       color: colors.$white-ish;
       font-size: 30px;
@@ -32,17 +33,18 @@
     }
     &__button--cv {
       margin: 15px 0;
-      background-color: colors.$blue;
+      background-color: colors.$blue-navy;
       color: colors.$white-ish;
-      border: none;
+      border: solid 1px colors.$white-ish;
       border-radius: 5px;
       //   padding: 5px;
       height: 30px;
       width: 40px;
       @include mixins.font(500, 0.5rem);
       &:hover {
-        background-color: colors.$blue-light;
+        background-color: colors.$blue;
         color: colors.$blue-navy;
+
         cursor: pointer;
       }
     }

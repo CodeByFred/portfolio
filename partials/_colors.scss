@@ -1,4 +1,12 @@
-$white-ish: #f9f7f7;
-$blue-light: #dbe2ef;
-$blue: #3f72af;
-$blue-navy: #112d4e;
+// Primary Colors
+$blue: #4a90e2; // (used for buttons and gradient start)
+$blue-light: #dceefb; // (used for gradient end and subtle accents)
+$blue-navy: #0c376d; // (used on button hover and sidenav)
+
+// Neutrals
+$white-ish: #ffffff; // White background for form
+$gray-medium: #cccccc; // Input border default
+$gray-dark: #333333; // Label text color
+$shadow-dark: rgba(0, 0, 0, 0.15); // Box shadow
+$shadow-blue: #4a90e233; // Focus shadow
+$text-main: #222222;

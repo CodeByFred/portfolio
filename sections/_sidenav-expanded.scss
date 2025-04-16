@@ -7,12 +7,12 @@
   }
 
   .nav {
-    // width: 250px;
     &__button--open {
       display: none;
     }
     &__button--close {
       align-self: flex-end;
+      margin-top: 10px;
       margin-right: 10px;
       color: colors.$white-ish;
       font-size: 30px;
@@ -24,7 +24,6 @@
       margin-left: 15px;
     }
     &__icon {
-      margin: 0 10px;
       height: 35px;
       width: 35px;
     }
@@ -33,24 +32,26 @@
       color: colors.$white-ish;
     }
     &__box {
-      width: 60%;
+      width: 50%;
       margin: 5% 0;
       display: flex;
       position: relative;
     }
     &__button--cv {
       margin: 5% 0;
-      background-color: colors.$blue;
+      background-color: colors.$blue-navy;
       color: colors.$white-ish;
-      border: none;
+      border: solid 1px colors.$white-ish;
       border-radius: 5px;
       padding: 5px;
       width: 65%;
       @include mixins.font(500, 1rem);
       &:hover {
-        background-color: colors.$blue-light;
+        background-color: colors.$blue;
         color: colors.$blue-navy;
+        border: 1px solid transparent;
         cursor: pointer;
+        transform: translateY(-1px);
       }
     }
   }
