@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" id="scroller">
 
+<!-- 
+-- Attributions --
+Home Photo: Photo by <a href="https://unsplash.com/@florianolv?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Florian Olivo</a> on <a href="https://unsplash.com/photos/lines-of-html-codes-4hbJ-eymZ1o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Icons: https://github.com/tandpfun/skill-icons?tab=readme-ov-file#icons-list
+Placeholder: https://www.planstobuild.com.au/newpage/kenyon-grove
+-->
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,24 +27,20 @@
 <body>
     <aside class="sidenav" id="sidenav">
         <nav class="nav expanded">
-            <a class="nav__button--close" onclick="closeNav()"><i class="fa-solid fa-chevron-left"
-                    style="color: #ffffff;"></i></a>
-            <a class="nav__button--open" onclick="openNav()"><i class="fa-solid fa-chevron-right"
-                    style="color: #ffffff;"></i></a>
+            <a class="nav__button--close" onclick="closeNav()"><i class="fa-solid fa-chevron-left"></i></a>
+            <a class="nav__button--open" onclick="openNav()"><i class="fa-solid fa-chevron-right"></i></a>
             <div class="nav__container">
                 <div class="nav__container--page-links">
-                    <a class="nav__link-page" href="#home"><i class="fa-solid fa-house fa-lg"
-                            style="color: #ffffff;"></i>
+                    <a class="nav__link-page" href="#home"><i class="fa-solid fa-house fa-lg"></i>
                         <span class="nav__info">Home</span></a>
-                    <a class="nav__link-page" href="#about"><i class="fa-solid fa-user fa-lg"
-                            style="color: #ffffff;"></i>
+                    <a class="nav__link-page" href="#about"><i class="fa-solid fa-user fa-lg"></i>
                         <span class="nav__info">About Me</span></a>
-                    <a class="nav__link-page" href="#skills"><i class="fa-solid fa-user-graduate fa-lg"
-                            style="color: #ffffff;"></i> <span class="nav__info">Skillset</span></a>
-                    <a class="nav__link-page" href="#project"><i class="fa-solid fa-briefcase fa-lg"
-                            style="color: #ffffff;"></i> <span class="nav__info">Projects</span></a>
-                    <a class="nav__link-page" href="#contact"><i class="fa-solid fa-envelope fa-lg"
-                            style="color: #ffffff;"></i> <span class="nav__info">Contact Me</span></a>
+                    <a class="nav__link-page" href="#skills"><i class="fa-solid fa-user-graduate fa-lg"></i> <span
+                            class="nav__info">Skillset</span></a>
+                    <a class="nav__link-page" href="#project"><i class="fa-solid fa-briefcase fa-lg"></i> <span
+                            class="nav__info">Projects</span></a>
+                    <a class="nav__link-page" href="#contact"><i class="fa-solid fa-envelope fa-lg"></i> <span
+                            class="nav__info">Contact Me</span></a>
                 </div>
                 <div class="nav__box">
                     <a class="nav__link-external" href="https://www.linkedin.com/in/frederick-jack-599b3537/">
@@ -69,27 +73,15 @@
             <div class="about__container">
                 <img class="about__image" src="./assets/images/me.jpeg" alt="fred">
                 <div class="about__container-text">
-                    <p class="about__text">My career journey has been defined by an interest in understanding people and
-                        a
-                        drive for
-                        technological
-                        innovation. I began my university career in the United States with a psychology degree because I
-                        have
-                        always been intrigued by human behaviour. This foundation honed my communication skills and
-                        insight
-                        into
-                        people but also laid the groundwork for a unique perspective that I bring to technology.</p>
-                    <p class="about__text">After moving to Australia, I wanted to continue my education and expand my
-                        interests. I enrolled in
-                        an
-                        electrical engineering program. It was during this time that a programming course gave me a
-                        passion
-                        that
-                        redefined my career path, leading me to pursue an honours degree in software engineering. Today,
-                        I
-                        combine my insights into human behaviour with technical expertise to create innovative solutions
-                        that
-                        drive meaningful change.</p>
+                    <p class="about__text">My career journey started with an interest in human behaviour, which led
+                        me to pursue a psychology degree in the United States. That foundation sharpened my
+                        communication skills and gave me a unique lens for understanding people — a perspective I now
+                        bring into tech.</p>
+                    <p class="about__text">After moving to Australia, I studied electrical engineering to broaden my
+                        interests. It was during a programming course that everything clicked. That spark turned into a
+                        full-blown passion, and I shifted gears to pursue an honours degree in software engineering.</p>
+                    <p class="about__text">Now, I blend behavioural insight with technical skills to build thoughtful,
+                        human-centered solutions that aim to make a difference.</p>
                 </div>
             </div>
         </section>
@@ -99,13 +91,15 @@
                 <div class="education">
                     <h2 class="skills__heading">Education</h2>
 
-                    <h3>Macquarie University</h3>
-                    <p>Bachelor of Engineering (Honours)</p>
-                    <p>Software Engineering</p>
+                    <div class="skills__info">
+                        <h3>Macquarie University</h3>
+                        <p>Bachelor of Engineering (Honours)</p>
+                        <p>Software Engineering</p>
 
-                    <h3>University of Texas at Arlington</h3>
-                    <p>Bachelor of Arts (B.A)</p>
-                    <p>Psychology</p>
+                        <h3>University of Texas at Arlington</h3>
+                        <p>Bachelor of Arts (B.A)</p>
+                        <p>Psychology</p>
+                    </div>
                 </div>
                 <div class="vl"></div>
                 <div class="skills__container-main">
