@@ -1,65 +1,57 @@
 @use "../partials/mixins";
 @use "../partials/colors";
 
-.collapsed {
+.expanded {
+  i {
+    margin-left: 15px;
+  }
+
   .nav {
-    width: 60px;
-    justify-content: center;
-    &__button--close {
-      display: none;
-    }
-    &__info {
-      display: none;
-    }
-    &__footer {
-      color: transparent;
-      margin: 0;
-      font-size: 10px;
-    }
     &__button--open {
+      display: none;
+    }
+    &__button--close {
+      align-self: flex-end;
       margin-top: 10px;
-      align-self: center;
+      margin-right: 10px;
       color: colors.$white-ish;
       font-size: 30px;
-      text-decoration: none;
       &:hover {
         cursor: pointer;
       }
     }
+    &__info {
+      margin-left: 15px;
+    }
     &__icon {
-      margin: 0 10px;
-      height: 30px;
-      width: 30px;
+      height: 35px;
+      width: 35px;
+    }
+    &__footer {
+      @include mixins.font(400, 0.65rem, colors.$white-ish);
+    }
+    &__box {
+      width: 50%;
+      margin: 5% 0;
+      display: flex;
+      position: relative;
     }
     &__button--cv {
-      margin: 15px 0;
+      @include mixins.font(500, 1rem);
+      margin: 5% 0;
       background-color: colors.$blue-navy;
       color: colors.$white-ish;
       border: solid 1px colors.$white-ish;
       border-radius: 5px;
-      height: 30px;
-      width: 40px;
-      @include mixins.font(500, 0.5rem);
+      padding: 5px;
+      width: 65%;
       &:hover {
         background-color: colors.$blue;
         color: colors.$blue-navy;
-
+        border: 1px solid transparent;
         cursor: pointer;
+        transform: translateY(-1px);
       }
-    }
-    &__box {
-      height: 80px;
-      width: fit-content;
-      margin: 5% 0;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    &__link-page {
-      text-align: center;
-      margin: 2px 0;
-      padding: 10px 0;
     }
   }
 
@@ -74,12 +66,12 @@
 
   #github {
     position: absolute;
-    bottom: 0;
+    right: 0;
   }
 
   #github--dark {
     position: absolute;
-    bottom: 0;
+    right: 0;
     opacity: 0;
     &:hover {
       opacity: 1;

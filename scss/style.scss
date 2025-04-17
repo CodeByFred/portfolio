@@ -1,14 +1,14 @@
-@use "../partials/modern-normalize";
-@use "../partials/mixins";
-@use "../partials/colors";
-@use "../sections/sidenav";
-@use "../sections/sidenav-expanded";
-@use "../sections/sidenav-collapsed";
-@use "../sections/home";
-@use "../sections/about";
-@use "../sections/skills";
-@use "../sections/projects";
-@use "../sections/contact";
+@use "./partials/modern-normalize";
+@use "./partials/mixins";
+@use "./partials/colors";
+@use "./sections/sidenav";
+@use "./sections/sidenav-expanded";
+@use "./sections/sidenav-collapsed";
+@use "./sections/home";
+@use "./sections/about";
+@use "./sections/skills";
+@use "./sections/projects";
+@use "./sections/contact";
 
 body {
   background: linear-gradient(to right, colors.$blue, colors.$blue-light);

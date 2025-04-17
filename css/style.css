@@ -183,7 +183,6 @@ summary {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
 }
 
 .nav {
@@ -198,10 +197,10 @@ summary {
 .nav__container {
   width: 100%;
   margin-top: -20%;
-  height: fit-content;
   justify-self: center;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 .nav__container--page-links {
@@ -226,11 +225,11 @@ summary {
   text-wrap: nowrap;
   border-radius: 5px;
 }
-.nav__link-page:hover {
+.nav__link-page.active {
   background-color: #4a90e2;
   text-shadow: none;
 }
-.nav__link-page.active {
+.nav__link-page:hover {
   background-color: #4a90e2;
   text-shadow: none;
 }
@@ -273,6 +272,12 @@ summary {
   position: relative;
 }
 .expanded .nav__button--cv {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  color: #222222;
   margin: 5% 0;
   background-color: #0c376d;
   color: #ffffff;
@@ -280,11 +285,6 @@ summary {
   border-radius: 5px;
   padding: 5px;
   width: 65%;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1rem;
 }
 .expanded .nav__button--cv:hover {
   background-color: #4a90e2;
@@ -357,10 +357,12 @@ summary {
   font-weight: 500;
   font-style: normal;
   font-size: 0.5rem;
+  color: #ffffff;
 }
 .collapsed .nav__button--cv:hover {
   background-color: #4a90e2;
   color: #0c376d;
+  border: none;
   cursor: pointer;
 }
 .collapsed .nav__box {
@@ -431,6 +433,7 @@ summary {
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
+  color: #222222;
 }
 .home__heading span {
   font-family: "Caveat", cursive;
@@ -438,6 +441,7 @@ summary {
   font-weight: 700;
   font-style: normal;
   font-size: 4rem;
+  color: #222222;
 }
 .home__subheading {
   font-family: "Montserrat", sans-serif;
@@ -445,6 +449,7 @@ summary {
   font-weight: 400;
   font-style: normal;
   font-size: 1.75rem;
+  color: #222222;
   font-style: italic;
 }
 .home__text {
@@ -453,6 +458,7 @@ summary {
   font-weight: 400;
   font-style: normal;
   font-size: 1.1rem;
+  color: #222222;
 }
 
 .about {
@@ -460,10 +466,12 @@ summary {
   height: 45vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 .about__container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 70%;
@@ -476,6 +484,7 @@ summary {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: normal;
 }
 .about__heading {
   font-family: "Montserrat", sans-serif;
@@ -487,13 +496,13 @@ summary {
   font-style: italic;
 }
 .about__text {
-  padding: 0 5%;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 1.05rem;
   color: #222222;
+  padding: 0 5%;
   margin: 0.4rem 0;
 }
 .about__image {
@@ -523,6 +532,7 @@ summary {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: normal;
   gap: 12%;
 }
 .skills__heading {
@@ -542,6 +552,7 @@ summary {
   font-weight: 600;
   font-style: normal;
   font-size: 1.1rem;
+  color: #222222;
   margin: 0.75em;
 }
 .skills__group {
@@ -567,16 +578,21 @@ summary {
 .skills__container-main {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
 }
 
 .education {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
 }
 
 .skills__info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 .skills__info h3 {
@@ -603,6 +619,7 @@ summary {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 .projects__heading {
@@ -620,6 +637,7 @@ summary {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: normal;
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 3rem;
@@ -647,17 +665,17 @@ summary {
   color: #ffffff;
 }
 .projects-card__text {
-  color: #ffffff;
-  text-align: center;
-  margin: 5px 5px 0 5px;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+  margin: 5px 5px 0 5px;
 }
 .projects-card__text--tool {
-  background-color: #dceefb;
+  background-color: #ffffff;
   color: #222222;
   padding: 5px;
   border-radius: 10px;
@@ -666,17 +684,20 @@ summary {
   font-weight: 500;
   font-style: normal;
   font-size: 0.9rem;
+  color: #222222;
 }
 .projects-card__container-tool {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: normal;
   flex-wrap: wrap;
   column-gap: 10px;
 }
 .projects-card__container-info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -685,10 +706,11 @@ summary {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 4rem 1rem;
 }
 .contact i {
+  color: #333333;
   margin-right: 0.5rem;
 }
 .contact__heading {
@@ -697,31 +719,39 @@ summary {
   font-weight: 700;
   font-style: normal;
   font-size: 2.5rem;
-  font-style: italic;
-  margin-bottom: 1rem;
   color: #222222;
+  font-style: italic;
+  margin-bottom: 4%;
 }
 .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
   width: 90%;
   max-width: 600px;
   background-color: #ffffff;
   border-radius: 16px;
   padding: 2rem 2.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .contact-form__group {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
   gap: 1rem;
   border: none;
 }
 .contact-form__group label {
   text-align: left;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
   color: #333333;
 }
 .contact-form__group input, .contact-form__group textarea {
@@ -729,7 +759,12 @@ summary {
   padding: 0.75rem;
   border: 1px solid #cccccc;
   border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   font-size: 1rem;
+  color: #222222;
 }
 .contact-form__group input:focus, .contact-form__group textarea:focus {
   outline: none;
@@ -740,20 +775,27 @@ summary {
   resize: none;
 }
 .contact-form__button {
-  background-color: #4a90e2;
-  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #4a90e2;
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
   margin-top: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 .contact-form__button:hover {
   background-color: #0c376d;
+  border: none;
   transform: translateY(-2px);
+}
+.contact-form__button .fa-paper-plane {
+  color: #ffffff;
 }
 
 body {

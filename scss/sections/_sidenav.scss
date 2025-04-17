@@ -4,29 +4,22 @@
 .sidenav {
   background-color: colors.$blue-navy;
   grid-area: sidenav;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  @include mixins.flex(column, space-between, center);
+  // height: 100%;
 }
 .nav {
   align-self: center;
   height: 100%;
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.flex(column, space-between, center);
 
   &__container {
     width: 100%;
     margin-top: -20%;
-    height: fit-content;
+    // height: fit-content;
     justify-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.flex(column, $align: center);
+
     &--page-links {
       width: 100%;
       display: flex;
@@ -41,17 +34,15 @@
     margin: 2% 0;
     width: 95%;
     padding: 5% 10%;
-    @include mixins.font(600, 1rem);
-    color: colors.$white-ish;
+    @include mixins.font(600, 1rem, colors.$white-ish);
     text-decoration: none;
     text-wrap: nowrap;
     border-radius: 5px;
-    &:hover {
+    &.active {
       background-color: colors.$blue;
       text-shadow: none;
     }
-    // not a pseduo-class!
-    &.active {
+    &:hover {
       background-color: colors.$blue;
       text-shadow: none;
     }

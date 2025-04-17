@@ -8,18 +8,12 @@
     color: colors.$text-main;
     margin: 2% 0;
   }
-
   grid-area: home;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  @include mixins.flex(column, center, center);
   &__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    @include mixins.flex(column, center, flex-start);
     height: 90%;
     width: 50%;
     margin-left: 8%;
