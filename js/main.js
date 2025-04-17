@@ -1,6 +1,7 @@
 const body = document.querySelector("body");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link-page");
+const form = document.querySelector(".contact-form");
 
 function openNav() {
   body.style.gridTemplateColumns = "225px auto";
@@ -46,3 +47,9 @@ function handleScroll() {
 
 window.addEventListener("scroll", debounce(handleScroll, 50));
 handleScroll();
+
+form.addEventListener("submit", () => {
+  setTimeout(() => {
+    form.reset();
+  }, 1500);
+});
