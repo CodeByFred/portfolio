@@ -11,6 +11,7 @@
     margin-bottom: 2.5rem;
   }
   &__container {
+    min-height: 80%;
     width: 85%;
     @include mixins.flex($justify: center);
     flex-wrap: wrap;
@@ -18,15 +19,16 @@
     margin-bottom: 3rem;
   }
   &-card {
-    margin: 0;
     background-color: colors.$blue;
-    height: 365px;
-    width: 290px;
+    width: 100%;
+    height: 325px;
+    max-width: 260px;
     border-radius: 15px;
     box-shadow: 0 10px 30px colors.$shadow-dark;
+    overflow: hidden;
 
     &__image {
-      height: 60%;
+      height: 50%;
       width: 100%;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
@@ -34,28 +36,33 @@
 
     &__title {
       @include mixins.font(500, 1rem, colors.$white-ish);
+      margin-top: 0.5rem;
     }
 
     &__text {
       @include mixins.font(400, 0.8rem, colors.$white-ish);
       text-align: center;
-      margin: 5px 5px 0 5px;
+      margin: 0 10px 10px 10px;
+
       &--tool {
         background-color: colors.$white-ish;
         color: colors.$text-main;
-        padding: 5px;
+        padding: 5px 10px;
         border-radius: 10px;
-        @include mixins.font(500, 0.9rem);
+        @include mixins.font(500, 0.8rem);
+        margin: 0;
       }
     }
     &__container-tool {
       @include mixins.flex($justify: center);
       flex-wrap: wrap;
-      column-gap: 10px;
+      // column-gap: 10px;
+      gap: 8px;
     }
 
     &__container-info {
       @include mixins.flex(column, $align: center);
+      padding: 0.5 rem;
     }
   }
 }
